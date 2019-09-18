@@ -1,0 +1,42 @@
+public class primeindex {
+
+	public static void main(String[] args) {
+		int[] a = new int[] {10,20,30,40,50,60,70,80,90,100};
+		
+		// TODO Auto-generated method stub
+		int b = sumOfNonPrimeIndex(a);
+		System.out.println(b);
+		
+	}
+
+	private static int sumOfNonPrimeIndex(int[] a) {
+		
+		int[] c = a;
+		int sum = 0;
+		for(int i=0;i<c.length;i++) {
+			if(!isPrime(i)) {
+				sum+=c[i];
+			}
+		}
+		
+		return sum;
+	}
+
+	private static boolean isPrime(int n) {
+		// TODO Auto-generated method stub
+		
+		if(n==0 || n==1) {
+			return false;
+		}
+		for(int i=2;i<n;i++) {
+			
+			if(n%i==0) {
+				return false;
+			}
+		}
+		
+			return true;
+		
+	}
+
+}

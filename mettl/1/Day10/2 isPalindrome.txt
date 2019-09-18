@@ -1,0 +1,13 @@
+// Write code here...
+		String str = input1.toLowerCase();
+		StringBuffer sb = new StringBuffer(str);
+		String rev = sb.reverse().toString();
+
+		if(str.equals(rev)){
+			return 2;
+		}
+
+		else
+		 return 1;
+	}
+}

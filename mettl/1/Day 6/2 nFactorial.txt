@@ -1,0 +1,7 @@
+// Write code here...
+		if(input1==0 || input1==1)
+			return 1;
+
+		return input1*nFactorial(input1-1);
+	}
+}

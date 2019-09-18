@@ -1,0 +1,33 @@
+// Write code here...
+
+		int evenCount=0;
+		int oddCount=0;
+
+		if(input1%2==0){
+			evenCount++;
+		}else oddCount++;
+
+		if(input2%2==0){
+			evenCount++;
+		}else oddCount++;
+
+		if(input3%2==0){
+			evenCount++;
+		}else oddCount++;
+
+		if(input4%2==0){
+			evenCount++;
+		}else oddCount++;
+
+		if(input5%2==0){
+			evenCount++;
+		}else oddCount++;
+
+		if(input6.equals("even"))
+			return evenCount;
+		else
+			return oddCount;
+
+		//throw new UnsupportedOperationException("countEvensOdds(int input1,int input2,int input3,int input4,int input5,String input6)");
+	}
+}

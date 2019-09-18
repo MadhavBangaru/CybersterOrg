@@ -1,0 +1,50 @@
+public class remove1digitPalindrome {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int rem = digitRemovePaln(251532);
+		System.out.println(rem);
+
+	}
+
+	private static int digitRemovePaln(int a) {
+		// TODO Auto-generated method stub
+		
+		StringBuffer num = new StringBuffer(String.valueOf(a));
+		
+		for(int i=0;i<num.length();i++) {
+			if(palindromeCheck(num.toString())) {
+				return -1;
+			}
+			
+			char removedChar = num.charAt(i);
+			
+			String newNum = num.deleteCharAt(i).toString();
+			if(palindromeCheck(newNum)) {
+				return Integer.parseInt(String.valueOf(removedChar));
+			}
+			else {
+				num.insert(i, removedChar);
+				}
+		}		
+		return -1;
+
+	}
+
+	private static boolean palindromeCheck(String str) {
+		// TODO Auto-generated method stub
+		
+		StringBuffer a = new StringBuffer(str);
+		String rev = a.reverse().toString();
+		if(rev.equals(str)) {
+			return true;
+		}else 
+		
+		
+		
+		return false;
+	}
+	
+
+}

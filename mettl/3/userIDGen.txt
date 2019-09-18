@@ -1,0 +1,61 @@
+public class userIDGen {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String First_Name = "Madhav";
+		String Last_Name ="Bangaru";
+		double PIN = 560037;
+		int N = 6;
+		
+		String userID = userIDGenr(First_Name,Last_Name,PIN,N);
+		System.out.println(userID);
+	}
+
+	private static String userIDGenr(String first_Name, String last_Name, double pIN, int n) {
+		// TODO Auto-generated method stub
+		String fname = first_Name;
+		String sname = last_Name;
+		
+		
+		String strPIN = String.valueOf(pIN);
+		
+		StringBuffer sb = new StringBuffer();
+		String smaller_name ="";
+		String larger_name ="";
+		if(fname.length()>sname.length()) {
+			smaller_name= sname;
+			larger_name= fname;
+		}else 
+			smaller_name = fname;
+			larger_name = sname;
+		
+		sb.append(smaller_name.charAt(smaller_name.length()-1));
+		sb.append(larger_name);
+		
+		String id = toggle(sb.toString());
+		
+		String nu = String.valueOf(strPIN.charAt(n-1))+String.valueOf(strPIN.charAt(strPIN.length()-n-2));
+		
+		
+		return id+nu;
+		
+	}
+
+	public static String toggle(String sentence) {
+	    StringBuilder toggled = new StringBuilder(sentence.length());
+	    for (char letter : sentence.toCharArray()) {
+	        if(Character.isUpperCase(letter)) {
+	            letter = Character.toLowerCase(letter);
+	        } else if(Character.isLowerCase(letter)) {
+	            letter = Character.toUpperCase(letter);
+	        }
+
+	        toggled.append(letter);
+
+	    }
+	    return toggled.toString();
+	}
+
+}
+

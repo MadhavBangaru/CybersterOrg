@@ -1,0 +1,16 @@
+	// Write code here...
+		boolean[] uniqueness = new boolean[] {false,false,false,false,false,false,false,false,false,false};
+		int number = input1;
+		int digitCount =0;
+		int digit =0;
+		while(number>0){
+			digit = number%10;
+			if(uniqueness[digit]==false){
+				uniqueness[digit]=true;
+				digitCount++;
+			}
+			number = number/10;
+		}
+		return digitCount;
+	}
+}

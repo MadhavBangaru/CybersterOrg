@@ -1,0 +1,17 @@
+// Write code here...
+
+		
+
+
+		String [] words = input1.split(" ");
+		try{
+		if(input1.equals("")&& words.length<2) return "LESS";
+		
+		String res = words[1].trim().toUpperCase();
+		return res;
+		} catch(ArrayIndexOutOfBoundsException e){
+			return "LESS";
+		}
+		
+	}
+}

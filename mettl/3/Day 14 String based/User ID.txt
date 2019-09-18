@@ -1,0 +1,43 @@
+// Write code here...
+		String smallerName="";
+		String largerName="";
+		String PIN = String.valueOf(input3);
+
+		StringBuffer sb = new StringBuffer();
+
+		if(input1.length()>input2.length()){
+			smallerName=input2;
+			largerName = input1;
+		}else if(input2.length()>input1.length()){
+			smallerName=input1;
+			largerName = input2;
+		}else{
+			if(input1.compareTo(input2)<1){
+				largerName = input2;
+				smallerName = input1;
+			}else
+				largerName = input1;
+				smallerName = input2;
+
+		}
+		sb.append(smallerName.charAt(smallerName.length()-1));
+		sb.append(largerName);
+
+		for(int i=0;i<sb.length();i++){
+			if(Character.isLowerCase(sb.charAt(i))){
+				sb.setCharAt(i, Character.toUpperCase(sb.charAt(i)));
+			}else
+				sb.setCharAt(i, Character.toLowerCase(sb.charAt(i)));
+		}
+		
+		sb.append(PIN.charAt(input4-1));
+		sb.append(PIN.charAt(PIN.length()-input4));
+
+		
+
+		return sb.toString();
+		
+
+
+	}
+}

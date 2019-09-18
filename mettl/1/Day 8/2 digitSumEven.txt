@@ -1,0 +1,15 @@
+int m , rem =0;
+    m = input1;
+    int evenSum=0;
+    while(m>0){
+
+        rem = m%10;
+        if(rem%2==0)
+            evenSum += rem;
+        m=m/10;
+    }
+
+    return evenSum;
+
+    
+}

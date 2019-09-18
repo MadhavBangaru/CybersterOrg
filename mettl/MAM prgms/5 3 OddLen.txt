@@ -1,0 +1,27 @@
+// Write code here...
+		int count=0;
+		int oddCount=0;
+		int longLen =0;
+		for(int i=0;i<input1.length;i++){
+			if(input1[i]%2==0){
+				count++;
+			}
+		}
+		if(count==input1.length){
+			return -1;	}
+
+		for(int i=0;i<input1.length;i++){
+			if(input1[i]%2!=0){
+				oddCount++;
+			
+
+			longLen = oddCount>longLen? oddCount : longLen;
+			}
+			else
+				oddCount =0;
+		}
+
+
+		return longLen;
+	}
+}

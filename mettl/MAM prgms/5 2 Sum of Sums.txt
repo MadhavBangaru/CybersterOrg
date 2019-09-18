@@ -1,0 +1,11 @@
+// Write code here...
+		String num =  String.valueOf(input1);
+		int sum =0;
+		for(int i=0;i<num.length();i++){
+			for(int j=0;j<=i;j++){
+				sum += Integer.parseInt(String.valueOf(num.charAt(j))); 
+			}
+		}
+		return sum;
+	}
+}

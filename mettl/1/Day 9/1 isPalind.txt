@@ -1,0 +1,11 @@
+// Write code here...
+		String str = String.valueOf(input1);
+
+		StringBuffer sb = new StringBuffer(str);
+		String rev = sb.reverse().toString();
+		if(str.equals(rev)){
+			return 2;
+		}else
+			return 1;
+	}
+}

@@ -1,0 +1,6 @@
+// Write code here...
+		int digitCount = String.valueOf(input1).length();
+
+		return digitCount;
+	}
+}

@@ -1,0 +1,25 @@
+
+********// Write code here...
+		String[] words = input1.split(" ");
+		int len=0;
+		for(int i=0;i<words.length;i++){
+			len+=words[i].length();
+		}
+		int digits = String.valueOf(len).length();
+		
+		while(digits>1){
+			int m = len;
+			int rem=0,sum=0;
+			while(m>0){
+				rem = m%10;
+				sum+=rem;
+				m=m/10;
+			}
+			len = sum;
+			digits = String.valueOf(len).length();
+			if(digits==1)
+				break;
+		}
+		return len;
+	}
+}

@@ -1,0 +1,19 @@
+// Write code here...
+		input1 = input1.toUpperCase();
+		int indexOfUndersvore = input1.indexOf('_');
+		String[] words = input2.split(":");
+
+		StringBuffer output = new StringBuffer();
+		for(int i=0;i<words.length;i++){
+			words[i] = words[i].toUpperCase();
+
+			if(words[i].length()>=input1.length() && input1.replace('_', words[i].charAt(indexOfUndersvore)).equals(words[i]))
+				output.append(words[i]).append(":");
+
+		}
+		if(output.length()==0){
+			 return "ERROR-009";
+		}
+		return output.substring(0,output.length()-1);
+	}
+}

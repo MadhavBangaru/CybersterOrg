@@ -1,0 +1,14 @@
+// Write code here...
+		if(input1<0)
+			input1*=-1;
+
+		int len = String.valueOf(input1).length();
+		if(len ==1){
+			return -1;
+		}
+		
+		int l2 = (input1/10)%10;
+		return l2;
+		
+	}
+}

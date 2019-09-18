@@ -1,0 +1,14 @@
+// Write code here
+    int m , rem =0;
+    m = input1;
+    int oddSum=0;
+    while(m>0){
+
+        rem = m%10;
+        if(rem%2!=0)
+            oddSum += rem;
+        m=m/10;
+    }
+
+    return oddSum;
+}
